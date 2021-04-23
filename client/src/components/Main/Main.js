@@ -1,10 +1,15 @@
 import './Main.css';
 
-function Main() {
+const Main = ({
+  posts
+}) => {
   return (
       <main className="main-container">
            <h1>Soooome Heading</h1>
-           <p>some posts</p>
+           
+           {posts.map(x => 
+              <p>{x.content}</p>
+            )}
       </main>
        
   );
