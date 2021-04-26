@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import {Route, Link, NavLink, Redirect, Switch} from 'react-router-dom';
 
 import * as postService from './services/postServices';
 
