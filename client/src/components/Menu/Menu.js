@@ -2,6 +2,7 @@ import { useState } from 'react';
 import MenuItem from './MenuItem';
 import { MENU_ITEMS } from './MenuConstants';
 
+
 import './Menu.css';
 
 const Menu = ({

@@ -7,6 +7,8 @@ import style from './App.module.css';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import Main from './components/Main';
+import About from './components/About';
+import Contact from './components/Contact';
 
 class App extends Component {
     constructor(props) {
@@ -46,8 +48,15 @@ class App extends Component {
 
             <div className={style.container}>
                  <Menu onMenuItemClick={this.onMenuItemClick} />
-
-                 <Main posts={this.getPosts()} />
+                    <Switch>
+                    <Route path="/" exact>
+                            <Main posts={this.getPosts()} />
+                        </Route> 
+                        <Route path="/about" component={About}/>
+                        <Route path="/contact" component={Contact}/>
+                        <Route  path="/custom" render={() => <h1>Custom Component</h1>}/> 
+                        <Route render={() => <h1>Error Page</h1>} /> 
+                    </Switch>
              </div>
          
         </div>

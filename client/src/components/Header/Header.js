@@ -1,22 +1,23 @@
 import style from './Header.module.css';
 import NavigationItem from './NavigationItem';
+import {Link} from 'react-router-dom';
 
 const Header = () => {
     return(
         <nav className={style.navigation}>
             <ul>
                 <li className={style.listItem}><img src="/white-origami-bird.png" alt="White Origami"/></li>
-                <NavigationItem>Going to 1</NavigationItem>
-                <NavigationItem>Going to 2</NavigationItem>
-                <NavigationItem>Going to 3</NavigationItem>
-                <NavigationItem>Going to 4</NavigationItem>
-                <NavigationItem>Going to 5</NavigationItem>
-                <NavigationItem>Going to 6</NavigationItem>
-                <NavigationItem>Going to 7</NavigationItem>
-                <NavigationItem>Going to 8</NavigationItem>
-                <NavigationItem>Going to 9</NavigationItem>
-                <NavigationItem>Going to 10</NavigationItem>
-                <NavigationItem>Going to 11</NavigationItem>
+                <Link to="/"><NavigationItem>Home</NavigationItem></Link>
+                <Link to="/about"><NavigationItem>About</NavigationItem></Link>
+                <Link to="/contact"><NavigationItem>Contact</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 4</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 5</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 6</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 7</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 8</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 9</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 10</NavigationItem></Link>
+                <Link to="/"><NavigationItem>Going to 11</NavigationItem></Link>
             </ul>
       </nav>
     );
