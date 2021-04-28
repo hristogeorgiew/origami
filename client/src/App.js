@@ -52,7 +52,7 @@ class App extends Component {
                     <Route path="/" exact>
                             <Main posts={this.getPosts()} />
                         </Route> 
-                        <Route path="/about" component={About}/>
+                        <Route path="/about/:name" component={About}/>
                         <Route path="/contact" component={Contact}/>
                         <Route  path="/custom" render={() => <h1>Custom Component</h1>}/> 
                         <Route render={() => <h1>Error Page</h1>} /> 
